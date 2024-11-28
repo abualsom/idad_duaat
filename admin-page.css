@@ -1,127 +1,128 @@
 /* إعدادات الصفحة بشكل عام */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    direction: rtl; /* التنسيق من اليمين لليسار */
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  direction: rtl; /* التنسيق من اليمين لليسار */
+  color: #333;
+  background-image: linear-gradient(to left, #fff, #000);
 }
 
 /* تنسيق الرأس */
 h1 {
-    text-align: center;
-    margin-top: 20px;
-    color: #4CAF50;
-    font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+  color: #4caf50;
+  font-size: 30px;
 }
 
 /* تنسيق النموذج */
 form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 1000px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
 }
 
 /* تنسيق الحقول */
 label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #555;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
 }
 
 /* تنسيق جميع الحقول من نوع input, select, textarea */
-input[type="text"],
-input[type="number"],
-input[type="tel"],
-input[type="email"],
-input[type="password"],
+input[type='text'],
+input[type='number'],
+input[type='tel'],
+input[type='email'],
+input[type='password'],
 textarea,
 select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    background-color: #fafafa;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fafafa;
+  box-sizing: border-box;
 }
 
 /* تنسيق الأزرار */
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 10px;
+input[type='submit'] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+input[type='submit']:hover {
+  background-color: #45a049;
 }
 
 /* تنسيق النصوص الكبيرة مثل textarea */
 textarea {
-    resize: vertical;
-    height: 100px;
+  resize: vertical;
+  height: 100px;
 }
 
 /* تقسيم الحقول في صفوف */
 form .row {
-    display: flex;
-    flex-wrap: wrap;  /* يسمح بتوزيع الحقول بشكل مناسب */
-    gap: 20px; /* المسافة بين الحقول */
+  display: flex;
+  flex-wrap: wrap; /* يسمح بتوزيع الحقول بشكل مناسب */
+  gap: 20px; /* المسافة بين الحقول */
 }
 
 /* تنسيق الحقول داخل الـ .row */
 form .row div {
-    flex: 1 1 calc(50% - 20px); /* كل حقل يأخذ نصف العرض مع المسافة بين الحقول */
+  flex: 1 1 calc(50% - 20px); /* كل حقل يأخذ نصف العرض مع المسافة بين الحقول */
 }
 
 /* تنسيق الحقول داخل الـ .row */
 form .row div label {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* تنسيق الحقول داخل الـ .row */
 form .row div input,
 form .row div select,
 form .row div textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 /* تنسيق زر الإرسال */
-form .row div input[type="submit"] {
-    width: auto;
-    margin-top: 20px;
+form .row div input[type='submit'] {
+  width: auto;
+  margin-top: 20px;
 }
 .buttons-container {
-    display: flex;
-    justify-content: space-between; /* ترتيب الأزرار */
-    gap: 10px; /* مسافة بين الأزرار */
+  display: flex;
+  justify-content: space-between; /* ترتيب الأزرار */
+  gap: 10px; /* مسافة بين الأزرار */
 }
 .buttons-container button {
-    padding: 10px 20px; /* حواف الأزرار */
-    font-size: 16px; /* حجم النص داخل الأزرار */
-    border: 1px solid #333; /* حدود الأزرار */
-    border-radius: 5px; /* زوايا دائرية للأزرار */
-    cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
-    transition: background-color 0.3s; /* تأثير تدرج عند التمرير */
+  padding: 10px 20px; /* حواف الأزرار */
+  font-size: 16px; /* حجم النص داخل الأزرار */
+  border: 1px solid #333; /* حدود الأزرار */
+  border-radius: 5px; /* زوايا دائرية للأزرار */
+  cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+  transition: background-color 0.3s; /* تأثير تدرج عند التمرير */
 }
 .buttons-container button:hover {
-    background-color: #4CAF50; /* تغيير اللون عند التمرير فوق الزر */
-    color: white; /* تغيير لون النص عند التمرير */
+  background-color: #4caf50; /* تغيير اللون عند التمرير فوق الزر */
+  color: white; /* تغيير لون النص عند التمرير */
 }
