@@ -1,6 +1,6 @@
 /* إعدادات الصفحة بشكل عام */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Cairo', sans-serif !important;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
@@ -9,11 +9,11 @@ body {
 }
 
 /* تنسيق الرأس */
-h1 {
+h1.title {
   text-align: center;
-  margin-top: 20px;
+  margin-block: 20px;
   color: #4caf50;
-  font-size: 30px;
+  font-size: calc(2vw + 1rem);
 }
 
 /* تنسيق النموذج */
@@ -112,16 +112,4 @@ form .row div input[type='submit'] {
   display: flex;
   justify-content: space-between; /* ترتيب الأزرار */
   gap: 10px; /* مسافة بين الأزرار */
-}
-.buttons-container button {
-  padding: 10px 20px; /* حواف الأزرار */
-  font-size: 16px; /* حجم النص داخل الأزرار */
-  border: 1px solid #333; /* حدود الأزرار */
-  border-radius: 5px; /* زوايا دائرية للأزرار */
-  cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
-  transition: background-color 0.3s; /* تأثير تدرج عند التمرير */
-}
-.buttons-container button:hover {
-  background-color: #4caf50; /* تغيير اللون عند التمرير فوق الزر */
-  color: white; /* تغيير لون النص عند التمرير */
 }

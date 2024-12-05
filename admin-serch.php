@@ -205,6 +205,12 @@ $connect->close();
         integrity="sha512-VNBisELNHh6+nfDjsFXDA6WgXEZm8cfTEcMtfOZdx0XTRoRbr/6Eqb2BjqxF4sNFzdvGIt+WqxKgn0DSfh2kcA=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+
     <style>
         .message {
             color: red;
@@ -234,7 +240,7 @@ $connect->close();
 </head>
 
 <body>
-    <h1 class="nino">إضافة معلومات المدرس</h1>
+    <h1 class="title">إضافة معلومات المدرس</h1>
 
     <!-- نموذج لإدخال البيانات -->
     <div class="container">
@@ -253,21 +259,21 @@ $connect->close();
             <input type="hidden" name="id" value="<?php echo $teacher_data['id']; ?>">
 
             <!-- الرقم الإداري -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0"
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start"
                     for="admin_number">الرقم الإداري:</label>
                 <select id="admin_number"
                     name="admin_number"
                     required>
-                    <option value="30" <?php echo ($admin_number  == '30') ? 'selected' : ''; ?>>30</option>>30</option>
-                    <option value="20" <?php echo ($admin_number  == '20') ? 'selected' : '';  ?>>20</option>>20</option>
+                    <option value="30" <?php echo ($admin_number  == '30') ? 'selected' : ''; ?> >30</option>
+                    <option value="20" <?php echo ($admin_number  == '20') ? 'selected' : '';  ?> >20</option>
                 </select>
             </div>
 
 
             <!-- اسم المدرس -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0"
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start"
                     for="teacher_name">اسم المدرس:</label>
                 <input class="m-0"
                     type="text"
@@ -279,8 +285,8 @@ $connect->close();
 
 
             <!-- الجنس -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0"
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start"
                     for="gender">الجنس:</label>
                 <select id="gender"
                     name="gender"
@@ -291,8 +297,8 @@ $connect->close();
             </div>
 
             <!-- الهاتف -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="phone">الهاتف:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="phone">الهاتف:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -302,8 +308,8 @@ $connect->close();
             </div>
 
             <!-- رقم المدرس -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="teacher_number">رقم المدرس:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="teacher_number">رقم المدرس:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -313,8 +319,8 @@ $connect->close();
             </div>
 
             <!-- الرقم الخاص -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="private_number">الرقم الخاص:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="private_number">الرقم الخاص:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -324,8 +330,8 @@ $connect->close();
             </div>
 
             <!-- الرقم التسلسلي -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="serial_number">الرقم التسلسلي:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="serial_number">الرقم التسلسلي:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -335,8 +341,8 @@ $connect->close();
             </div>
 
             <!-- هل يوجد كملك؟ -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="has_kimlik">هل يوجد كملك؟</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="has_kimlik">هل يوجد كملك؟</label>
                 <select
                     id="has_kimlik"
                     name="has_kimlik">
@@ -351,8 +357,8 @@ $connect->close();
             </div>
 
             <!-- اسم البنك -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="bank_name">اسم البنك:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="bank_name">اسم البنك:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -362,8 +368,8 @@ $connect->close();
             </div>
 
             <!-- اسم صاحب الحساب -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="account_holder_name">اسم صاحب الحساب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="account_holder_name">اسم صاحب الحساب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -373,8 +379,8 @@ $connect->close();
             </div>
 
             <!-- حساب البنك -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="bank_account">حساب البنك:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="bank_account">حساب البنك:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -384,8 +390,8 @@ $connect->close();
             </div>
 
             <!-- المسمى الوظيفي -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="job_title">المسمى الوظيفي:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="job_title">المسمى الوظيفي:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -395,8 +401,8 @@ $connect->close();
             </div>
 
             <!-- رمز الحفظ -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="hifz_code">رمز الحفظ:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="hifz_code">رمز الحفظ:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -406,8 +412,8 @@ $connect->close();
             </div>
 
             <!-- رمز التلاوة -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="telave_code">رمز التلاوة:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="telave_code">رمز التلاوة:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -417,8 +423,8 @@ $connect->close();
             </div>
 
             <!-- رمز الرشيدي -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="reshid_code">رمز الرشيدي:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="reshid_code">رمز الرشيدي:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -428,8 +434,8 @@ $connect->close();
             </div>
 
             <!-- رمز حلقات عن قرب -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="halakat_kurb_code">رمز حلقات عن قرب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="halakat_kurb_code">رمز حلقات عن قرب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -439,8 +445,8 @@ $connect->close();
             </div>
 
             <!-- رمز الموجه -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="muwajih_code">رمز الموجه:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="muwajih_code">رمز الموجه:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -450,8 +456,8 @@ $connect->close();
             </div>
 
             <!-- رمز الشريعة -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="shariaa_code">رمز الشريعة:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="shariaa_code">رمز الشريعة:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -461,8 +467,8 @@ $connect->close();
             </div>
 
             <!-- رمز الايتام -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="aytam_code">رمز الايتام:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="aytam_code">رمز الايتام:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -472,8 +478,8 @@ $connect->close();
             </div>
 
             <!-- رمز علمني القرآن -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="kuran_titsh_code">رمز علمني القرآن:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="kuran_titsh_code">رمز علمني القرآن:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -483,8 +489,8 @@ $connect->close();
             </div>
 
             <!-- ساعات التدريس -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="teaching_hours">ساعات التدريس:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="teaching_hours">ساعات التدريس:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -494,8 +500,8 @@ $connect->close();
             </div>
 
             <!-- ساعات الاشراف -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="supervision_hours">ساعات الاشراف:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="supervision_hours">ساعات الاشراف:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -505,8 +511,8 @@ $connect->close();
             </div>
 
             <!-- عمل اضافي -->
-            <div>
-                <label class="flex-shrink-0" for="additional_work">عمل اضافي:</label>
+            <div  data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="additional_work">عمل اضافي:</label>
                 <select id="additional_work" name="additional_work">
                     <option value="0" <?php echo ($additional_work == '0') ? 'selected' : ''; ?>>لا</option>
                     <option value="1" <?php echo ($additional_work == '1') ? 'selected' : ''; ?>>نعم</option>
@@ -514,8 +520,8 @@ $connect->close();
             </div>
 
             <!-- مجموع الساعات -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="total_hours">مجموع الساعات:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="total_hours">مجموع الساعات:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -525,8 +531,8 @@ $connect->close();
             </div>
 
             <!-- عدد الحلقات -->
-            <div>
-                <label class="flex-shrink-0" for="halaka_count">عدد الحلقات:</label>
+            <div data-aos="fade-left" >
+                <label class="flex-shrink-0 text-start" for="halaka_count">عدد الحلقات:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -536,8 +542,8 @@ $connect->close();
             </div>
 
             <!-- اتم واجب الحلقة الأولى -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="halaka_1">اتم واجب الحلقة الأولى:</label>
+            <div data-aos="fade-down-left" class="text-white flex-row-reverse text-center p-3 col-lg-6 d-flex gap-2 align-items-center justify-content-end text-star">
+                <label class="mb-0 flex-shrink-0 text-start" for="halaka_1">اتم واجب الحلقة الأولى:</label>
                 <input
                     class="m-0"
                     type="checkbox"
@@ -548,8 +554,8 @@ $connect->close();
             </div>
 
             <!-- اتم واجب الحلقة الثانية -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="halaka_2">اتم واجب الحلقة الثانية:</label>
+            <div data-aos="fade-down-right" data-aos="fade-up-right" class="text-white flex-row-reverse text-center p-3 col-lg-6 d-flex gap-2 align-items-center justify-content-end text-star">
+                <label class="mb-0 flex-shrink-0 text-start" for="halaka_2">اتم واجب الحلقة الثانية:</label>
                 <input
                     class="m-0"
                     type="checkbox"
@@ -560,8 +566,8 @@ $connect->close();
             </div>
 
             <!-- اتم واجب الحلقة الثالثة -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="halaka_3">اتم واجب الحلقة الثالثة:</label>
+            <div data-aos="fade-up-left" class="text-white flex-row-reverse text-center p-3 col-lg-6 d-flex gap-2 align-items-center justify-content-end text-star">
+                <label class="mb-0 flex-shrink-0 text-start" for="halaka_3">اتم واجب الحلقة الثالثة:</label>
                 <input
                     class="m-0"
                     type="checkbox"
@@ -572,8 +578,8 @@ $connect->close();
             </div>
 
             <!-- اتم واجب الحلقة الرابعة -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="halaka_4">اتم واجب الحلقة الرابعة:</label>
+            <div data-aos="fade-up-right" class="text-white flex-row-reverse text-center p-3 col-lg-6 d-flex gap-2 align-items-center justify-content-end text-star">
+                <label class="mb-0 flex-shrink-0 text-start" for="halaka_4">اتم واجب الحلقة الرابعة:</label>
                 <input
                     class="m-0"
                     type="checkbox"
@@ -585,8 +591,8 @@ $connect->close();
 
 
             <!-- الرواتب -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="salary_1">الراتب الأول:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="salary_1">الراتب الأول:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -596,8 +602,8 @@ $connect->close();
             </div>
 
             <!-- السبب -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="sebeb"> السبب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="sebeb"> السبب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -607,8 +613,8 @@ $connect->close();
             </div>
 
             <!-- الراتب الثاني -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="salary_2">الراتب الثاني:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="salary_2">الراتب الثاني:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -618,8 +624,8 @@ $connect->close();
             </div>
 
             <!-- السبب 2 -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="sebeb2"> السبب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="sebeb2"> السبب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -629,8 +635,8 @@ $connect->close();
             </div>
 
             <!-- الراتب الثالث -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="salary_3">الراتب الثالث:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="salary_3">الراتب الثالث:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -640,8 +646,8 @@ $connect->close();
             </div>
 
             <!-- السبب 3 -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="sebeb3"> السبب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="sebeb3"> السبب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -651,8 +657,8 @@ $connect->close();
             </div>
 
             <!-- الراتب الرابع -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="salary_4">الراتب الرابع:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="salary_4">الراتب الرابع:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -662,8 +668,8 @@ $connect->close();
             </div>
 
             <!-- السبب 4 -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="sebeb4"> السبب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="sebeb4"> السبب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -673,8 +679,8 @@ $connect->close();
             </div>
 
             <!-- الراتب الخامس -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="salary_5">الراتب الخامس:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="salary_5">الراتب الخامس:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -684,8 +690,8 @@ $connect->close();
             </div>
 
             <!-- السبب 5 -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="sebeb5"> السبب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="sebeb5"> السبب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -695,8 +701,8 @@ $connect->close();
             </div>
 
             <!-- الراتب السادس -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="salary_6">الراتب السادس:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="salary_6">الراتب السادس:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -706,8 +712,8 @@ $connect->close();
             </div>
 
             <!-- السبب 6 -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="sebeb6"> السبب:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="sebeb6"> السبب:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -717,8 +723,8 @@ $connect->close();
             </div>
 
             <!-- الخصم -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="deduction">الخصم:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="deduction">الخصم:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -728,8 +734,8 @@ $connect->close();
             </div>
 
             <!-- المجموع النهائي -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="final_total">المجموع النهائي:</label>
+            <div data-aos="fade-right" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="final_total">المجموع النهائي:</label>
                 <input
                     class="m-0"
                     type="text"
@@ -740,22 +746,45 @@ $connect->close();
             </div>
 
             <!-- ملاحظات الموجه -->
-            <div class="text-white text-center p-3 col-lg-6 d-flex gap-2 flex-column text-star">
-                <label class="flex-shrink-0" for="supervisor_notes">ملاحظات الموجه:</label>
+            <div data-aos="fade-left" class="text-white text-center py-2 px-3 col-lg-6 d-flex gap-2 flex-column text-star">
+                <label class="flex-shrink-0 text-start" for="supervisor_notes">ملاحظات الموجه:</label>
                 <textarea
                     id="supervisor_notes"
                     name="supervisor_notes"><?php echo $supervisor_notes ?> </textarea>
             </div>
             <div class="buttons-container">
-                <button type="submit" name="delete" onclick="return confirmDelete()">حذف الاسم</button>
-                <button type="submit" name="update" id="updateBtn" onclick="return confirmUpdate()">تعديل</button>
-                <a href="http://localhost/idad_duaat/admin-login.php">عودة للبحث عن اسم آخر </a>
+                <div class="d-flex gap-3 justify-content-end flex-grow-1">
+                    <button class="btn btn-danger" type="submit" name="delete" id="alertButton" onclick="return confirmDelete()">حذف</button>
+                    <button class="btn btn-success" type="submit" name="update" id="updateBtn" onclick="return confirmUpdate()">تعديل</button>
+                </div>
             </div>
         </form>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const button = document.getElementById("alertButton");
+            button.addEventListener("click", () => {
+                Swal.fire({
+                    title: "هل تريد الاستمرار بالحذف؟",
+                    icon: "question",
+                    iconHtml: "؟",
+                    confirmButtonText: "نعم",
+                    cancelButtonText: "لا",
+                    showCancelButton: true,
+                    showCloseButton: true
+                });
+            });
+        });
     </script>
 </body>
 
