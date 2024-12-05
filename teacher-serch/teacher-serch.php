@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
 
 <body>
     <div class="form-container">
-        <h2> ابحث عن المدرس</h2>
+        <h2>نموذج المدرس</h2>
         <form action="" method="POST">
             <div style="text-align: center; color: red; font-weight: bold; font-size: 1.5em;">
                 <?php if (isset($messeg)) echo $messeg; ?>
@@ -70,8 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
                         autocomplete="off">
             </div>
             <div class="form-group">
-                <label for="admin-number">الرقم الإداري</label>
-                <input type="text" id="admin-number" name="admin-number" placeholder="أدخل الرقم الإداري" required value ="30">
+                <label for="admin-number">الرقم الخاص</label>
+                <input type="text" id="private_number" name="private_number" placeholder="أدخل الرقم الخاص" required>
             </div>
             <div class="form-group">
                 <button type="submit" name="search">بحث</button>
